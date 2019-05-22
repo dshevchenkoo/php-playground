@@ -3,15 +3,15 @@
 $number = rand(0, 101);
 
 while(true) {
-    $userNumberStr = readline('Введите число: ');
-    if (!$userNumberStr || $userNumberStr == 'exit') break;
+    $answer = readline('Введите число: ');
+    if (!$answer || $answer == 'exit') break;
     
-    if (!is_numeric($userNumberStr)){
+    if (!is_numeric($answer)){
         print_r('Введите правильное число!' . "\n");
         continue;
     }
 
-    $userNumber = (int) $userNumberStr;
+    $userNumber = (int) $answer;
     if ($userNumber == $number) {
         print_r('Верно!' . "\n");
         break;
